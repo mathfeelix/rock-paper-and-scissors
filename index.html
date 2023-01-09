@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper and Scissors</title>
+
+    <!-- FONTE -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Javascript -->
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header><h1>Rock, Paper and Scissors</h1></header>
+
+    <main id="game-container">
+      <div id="title">Choose your option:</div>
+
+      <!-- Options -->
+      <section id="options-container">
+        <button class="option">
+          <img src="./img/rock.png" alt="Rock" data-value="rock" />
+        </button>
+        <button class="option">
+          <img src="./img/paper.png" alt="Paper" data-value="paper" />
+        </button>
+        <button class="option">
+          <img src="./img/scissors.png" alt="Scissors" data-value="scissors" />
+        </button>
+      </section>
+
+      <section id="result-container">
+        <!-- Images and text start as hidden and are shown when an option is selected -->
+
+        <!-- Images -->
+        <img id="your-choice" src="./img/rock.png" alt="Rock" class="hidden" />
+        <span id="X">X</span>
+        <img
+          id="computer-choice"
+          src="./img/scissors.png"
+          alt="Scissors"
+          class="hidden"
+        />
+
+        <!-- Winner text container -->
+        <div id="winner-text-container" class="hidden">
+          <span id="winner-text">You won...</span>
+          <br />
+          <span id="beats-text">Rock beats Scissors!</span>
+        </div>
+
+        <!-- Score container -->
+        <div id="score-container">
+          <h3>You <span id="player-score" class="score-number">0</span></h3>
+          &nbsp;&nbsp;&nbsp;
+          <h3>
+            Computer <span id="computer-score" class="score-number">0</span>
+          </h3>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

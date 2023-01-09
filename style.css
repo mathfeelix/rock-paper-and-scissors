@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #1e1f1f;
+  --font-color: #fff8e8;
+  --yellow: #fcd581;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--font-color);
+  background-color: var(--bg-color);
+  text-align: center;
+}
+
+header {
+  padding: 2rem 0;
+  background-color: var(--font-color);
+  color: var(--bg-color);
+  min-width: 40rem;
+}
+
+#game-container {
+  /* background-color: aqua; */
+  width: 40rem;
+  margin: 0 auto;
+}
+
+#title {
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#options-container {
+  margin-top: 1.5rem;
+}
+
+.option {
+  border: 0.1rem solid var(--font-color);
+  border-radius: 100%;
+  background: none;
+  cursor: pointer;
+  margin: 0 1rem;
+  padding: 1rem;
+  transition: 0.5s;
+}
+
+.option:hover {
+  transform: scale(1.1);
+}
+
+.option img {
+  width: 3rem;
+}
+
+#result-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "your-choice X computer-choice"
+    "winner-text winner-text winner-text"
+    "score score score";
+  margin: 3rem;
+  gap: 2rem;
+}
+
+#your-choice {
+  justify-self: end;
+  grid-area: your-choice;
+}
+
+#X {
+  grid-area: X;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+#computer-choice {
+  justify-self: start;
+  grid-area: computer-choice;
+}
+
+#your-choice,
+#computer-choice {
+  width: 7.5rem;
+}
+
+#winner-text-container {
+  grid-area: winner-text;
+}
+
+#winner-text-container #winner-text {
+  font-weight: 700;
+}
+
+#winner-text-container #winner-text {
+  font-size: 2rem;
+  color: var(--yellow);
+}
+
+#winner-text-container #beats-text {
+  font-size: 1.2rem;
+}
+
+#score-container {
+  grid-area: score;
+}
+
+#score-container h3 {
+  display: inline;
+  font-size: 2rem;
+}
+
+#score-container .score-number {
+  font-weight: 700;
+  color: var(--yellow);
+  margin-left: 0.5rem;
+}
+
+#player-score {
+  margin-right: 2rem;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@keyframes winnerAnimation {
+  0% {
+    transform: scale(inherit);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(inherit);
+  }
+}
