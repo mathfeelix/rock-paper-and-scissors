@@ -8,6 +8,7 @@
   --bg-color: #1e1f1f;
   --font-color: #fff8e8;
   --yellow: #fcd581;
+  --yellow-transparent: rgba(252, 213, 129, 0.9);
 }
 
 body {
@@ -127,8 +128,58 @@ header {
   margin-right: 2rem;
 }
 
+#final-result-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60rem;
+  padding: 1.4rem;
+  background: var(--yellow-transparent);
+  box-shadow: 4px 10px 14px -1px rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#final-result-text {
+  color: var(--bg-color);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+#restart {
+  font-family: inherit;
+  background: none;
+  color: var(--bg-color);
+  border: 0.1rem solid var(--bg-color);
+  border-radius: 0.2rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#restart:hover {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  border: 0.1rem solid transparent;
+}
+
+/* Hides the images and text in the beginning */
 .hidden {
   opacity: 0;
+}
+
+/*
+  Removes click events from the options to stop the game
+  and disables the restart button in the beginning
+*/
+.pointer-events-none {
+  pointer-events: none;
 }
 
 @keyframes winnerAnimation {

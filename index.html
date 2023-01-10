@@ -37,9 +37,9 @@
         </button>
       </section>
 
+      <!-- Result container with images chosen, text and scores -->
+      <!-- Images and text start as hidden and are shown when an option is selected -->
       <section id="result-container">
-        <!-- Images and text start as hidden and are shown when an option is selected -->
-
         <!-- Images -->
         <img id="your-choice" src="./img/rock.png" alt="Rock" class="hidden" />
         <span id="X">X</span>
@@ -65,6 +65,13 @@
             Computer <span id="computer-score" class="score-number">0</span>
           </h3>
         </div>
+      </section>
+
+      <!-- Final Result box -->
+      <!-- Starts as hidden and shows when someone scores 5 points -->
+      <section id="final-result-box" class="hidden pointer-events-none">
+        <h1 id="final-result-text">You</h1>
+        <button id="restart">Restart</button>
       </section>
     </main>
   </body>
